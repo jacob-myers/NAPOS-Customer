@@ -74,7 +74,7 @@ class _MyMenuState extends State<MyMenu> {
             child: Card(
               child: Padding(
                 padding:EdgeInsets.all(20.0),
-                child: Text("Menu Item")
+                child: Text("Menu Item ${index + 1}")
               )
             ),
             onTap: () {

@@ -35,7 +35,7 @@ class _SideBar extends State<SideBar> {
               child: Card(
                 child: Padding(
                   padding: EdgeInsets.all(20.0),
-                  child: Text("Category")
+                  child: Text("Category ${index + 1}")
                 )
               ),
               onTap: () {
