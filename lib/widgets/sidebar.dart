@@ -30,41 +30,19 @@ class _SideBar extends State<SideBar> {
         ),
         // Categories Body
         body: ListView(
-          children: [
-            InkWell(
+          children: List.generate(20, (index) {
+            return InkWell(
               child: Card(
                 child: Padding(
                   padding: EdgeInsets.all(20.0),
-                  child: Text("Food")
+                  child: Text("Category")
                 )
               ),
               onTap: () {
-
+                // SHOW ONLY ITEMS FROM CATEGORY
               },
-            ),
-            InkWell(
-              child: Card(
-                  child: Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Text("Drink")
-                  )
-              ),
-              onTap: () {
-
-              },
-            ),
-            InkWell(
-              child: Card(
-                  child: Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Text("Merchandise")
-                  )
-              ),
-              onTap: () {
-
-              },
-            ),
-          ],
+            );
+          })
         ),
       )
     );

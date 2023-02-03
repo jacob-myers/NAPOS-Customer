@@ -58,7 +58,6 @@ class _MyMenuState extends State<MyMenu> {
               textAlign: TextAlign.center,
             ),
           ),
-
           //Button to navigate to cart.
           IconButton(
             icon: Icon(Icons.shopping_cart),
@@ -69,6 +68,21 @@ class _MyMenuState extends State<MyMenu> {
         ],
       ),
       drawer: SideBar(),
+      body: ListView(
+        children: List.generate(20, (index) {
+          return InkWell(
+            child: Card(
+              child: Padding(
+                padding:EdgeInsets.all(20.0),
+                child: Text("Menu Item")
+              )
+            ),
+            onTap: () {
+              // NAVIGATE TO DETAILS PAGE ABOUT THE ITEM
+            },
+          );
+        }),
+      ),
     );
   }
 }
