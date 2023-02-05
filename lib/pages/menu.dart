@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:napos_customer/pages/item_details.dart';
 import '../widgets/sidebar.dart';
 
 // Using a drawer: https://api.flutter.dev/flutter/material/Scaffold/drawer.html
@@ -67,21 +68,57 @@ class _MyMenuState extends State<MyMenu> {
           )
         ],
       ),
+
       drawer: SideBar(),
+
       body: ListView(
         children: List.generate(20, (index) {
           return InkWell(
             child: Card(
-              child: Padding(
-                padding:EdgeInsets.all(20.0),
-                child: Text("Menu Item ${index + 1}")
-              )
+                child: Padding(
+                    padding:EdgeInsets.all(20.0),
+                    child: Text("Menu Item ${index + 1}")
+                )
             ),
             onTap: () {
-              // NAVIGATE TO DETAILS PAGE ABOUT THE ITEM
+              // Navigate to the item details page about selected item (passes as string rn)
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ItemDetailsPage(itemName: "Menu Item ${index + 1}"))
+              );
             },
           );
         }),
+      ),
+
+      bottomNavigationBar: BottomAppBar(
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+          child: Row(
+            children: [
+              TextButton(
+                style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 12),
+                ),
+                child: Text(
+                  "Checkout",
+                  style: TextStyle(color: Colors.red),
+                ),
+                onPressed: () {
+                  // NAVIGATE TO CART
+                },
+              ),
+
+              Spacer(),
+
+              // Cart total.
+              Text(
+                "\$1.12",
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

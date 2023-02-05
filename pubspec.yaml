@@ -89,3 +89,12 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  assets:
+    - assets/images/Nutrition-of-Strawberries.jpg
+
+# Doesn't work.
+#fonts:
+#  - family: CustomIcons
+#    fonts:
+#      - asset: fonts/CustomIcons.ttf
