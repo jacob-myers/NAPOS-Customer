@@ -15,9 +15,10 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(widget.itemName)
-        ),
+        centerTitle: true,
+        title: Text(widget.itemName)
+        // Removed cart button and total from Item Details page for now.
+        /*
         actions: [
           // Amount of money in cart (not implemented).
           Container(
@@ -35,6 +36,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
             },
           )
         ],
+        */
       ),
 
       body: ListView(

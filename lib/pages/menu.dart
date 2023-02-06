@@ -56,7 +56,7 @@ class _MyMenuState extends State<MyMenu> {
           Container(
             alignment: Alignment.center,
             child: Text(
-              "\$1.12",
+              "\$20.00",
               textAlign: TextAlign.center,
             ),
           ),
@@ -82,7 +82,15 @@ class _MyMenuState extends State<MyMenu> {
             child: Card(
                 child: Padding(
                     padding:EdgeInsets.all(20.0),
-                    child: Text("Menu Item ${index + 1}")
+                    child: Row(
+                      children: [
+                        // Name of item takes up all space not taken by price.
+                        Expanded(
+                            child: Text("Menu Item ${index + 1}")
+                        ),
+                        Text("\$1.00",)
+                      ],
+                    )
                 )
             ),
             onTap: () {
@@ -122,7 +130,7 @@ class _MyMenuState extends State<MyMenu> {
 
               // Cart total.
               Text(
-                "\$1.12",
+                "\$20.00",
                 textAlign: TextAlign.center,
               ),
             ],
