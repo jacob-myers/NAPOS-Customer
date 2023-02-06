@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:napos_customer/pages/cart.dart';
-=======
->>>>>>> f78e76f03dededbed0eafec6fb7c9997ebd02707
 import 'package:napos_customer/pages/item_details.dart';
 import '../widgets/sidebar.dart';
 
@@ -67,15 +64,11 @@ class _MyMenuState extends State<MyMenu> {
           IconButton(
             icon: Icon(Icons.shopping_cart),
             onPressed: () {
-<<<<<<< HEAD
               // Navigate to cart
               Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => CartPage())
               );
-=======
-              // NAVIGATE TO CART
->>>>>>> f78e76f03dededbed0eafec6fb7c9997ebd02707
             },
           )
         ],
@@ -117,15 +110,11 @@ class _MyMenuState extends State<MyMenu> {
                   style: TextStyle(color: Colors.red),
                 ),
                 onPressed: () {
-<<<<<<< HEAD
                   // Navigate to cart
                   Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => CartPage())
                   );
-=======
-                  // NAVIGATE TO CART
->>>>>>> f78e76f03dededbed0eafec6fb7c9997ebd02707
                 },
               ),
 
