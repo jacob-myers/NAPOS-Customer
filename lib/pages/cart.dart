@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:napos_customer/pages/payment_options.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
@@ -69,7 +70,7 @@ class _CartPage extends State<CartPage> {
                   // Navigate to PAYMENT
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CartPage())
+                      MaterialPageRoute(builder: (context) => PaymentOptionsPage())
                   );
                 },
               ),
